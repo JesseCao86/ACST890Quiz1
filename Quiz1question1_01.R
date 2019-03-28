@@ -13,7 +13,7 @@ output
 bond.price= function(coupon,NumofPayments,interest,face){
   
 t<- c(seq(0.5,NumofPayments/2,by= 0.5))
-bond.price= sum(coupon *exp(-y*t))+ face*exp(-(NumofPayments/2)*y[length(y)])
+bond.price= sum(coupon *exp(-interest*t))+ face*exp(-(NumofPayments/2)*interest[length(interest)])
 
 }
 output=bond.price(6,4,c(0.03,0.04,0.05,0.055),100)
